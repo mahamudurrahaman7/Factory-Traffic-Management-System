@@ -21,9 +21,9 @@ public interface JunctionMapper {
     List<JunctionResponseDto> toResponseList(List<Junction> users);
 
     @Mapping(target = "id", ignore = true)
-    void updateJunctionFromDto(UpdateJunctionRequestDto dto, @MappingTarget Junction user);
+    void updateJunctionFromDto(UpdateJunctionRequestDto dto, @MappingTarget Junction junction);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id", ignore = true)
-    void partialUpdateJunctionFromDto(PatchUpdateJunctionRequestDto dto, @MappingTarget Junction user);
+    void partialUpdateJunctionFromDto(PatchUpdateJunctionRequestDto dto, @MappingTarget Junction junction);
 }
